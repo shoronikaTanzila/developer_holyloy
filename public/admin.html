@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>HolyLoy Admin</title><link rel="stylesheet" href="styles.css">
+<style>body{padding:24px}table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:14px;margin-bottom:32px}th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{background:var(--navy2);color:#fff}.sc{overflow-x:auto}</style></head>
+<body><div class="wrap"><img src="logo.png" alt="" style="height:56px"><h1>Leads &amp; Investors</h1>
+<form id="f" style="display:flex;gap:10px;margin:16px 0"><input id="k" type="password" placeholder="Admin key" class="fld" style="padding:12px;border:1px solid var(--line);border-radius:10px"><button class="btn btn-navy btn-sm">Load</button></form>
+<p id="e" class="err" hidden></p><h2>Demo requests</h2><div class="sc"><table id="d"></table></div><h2>Investors</h2><div class="sc"><table id="i"></table></div></div>
+<script>
+const q=s=>document.querySelector(s),x=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tbl=(el,cols,rows)=>el.innerHTML='<tr>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr>'+rows.map(r=>'<tr>'+cols.map(c=>`<td>${x(c==='createdAt'?new Date(r[c]).toLocaleString():r[c])}</td>`).join('')+'</tr>').join('');
+q('#f').onsubmit=async e=>{e.preventDefault();q('#e').hidden=true;const r=await fetch('/api/admin/overview',{headers:{'x-admin-key':q('#k').value}});
+if(!r.ok){q('#e').textContent='Wrong key or server error';q('#e').hidden=false;return}const j=await r.json();
+tbl(q('#d'),['createdAt','name','email','phone','tier','status'],j.demos);tbl(q('#i'),['createdAt','name','email','phone','nid','nominee','shares','status'],j.investors)};
+</script></body></html>

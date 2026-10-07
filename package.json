@@ -1,0 +1,19 @@
+{
+  "name": "holyloy-app",
+  "version": "1.0.0",
+  "description": "HolyLoy Developments Ltd. website + MongoDB API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "mongodb": "^7.7.0"
+  }
+}

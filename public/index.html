@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HolyLoy Developments Ltd. | Smart Land Share Investment</title>
+<meta name="description" content="Own fractional land shares from ৳3,00,000 with easy 28-month installments and a secured company buy-back. HolyLoy Developments Ltd., Gulshan, Dhaka.">
+<meta name="theme-color" content="#0B1B3D">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- NAV -->
+<header class="top" id="top">
+  <div class="nav">
+    <a class="logo" href="#hero" aria-label="HolyLoy Developments Ltd."><img src="logo.png" alt="HolyLoy Developments Ltd."></a>
+    <nav aria-label="Main">
+      <a href="#packages" data-i18n="navPackages"></a>
+      <a href="#growth" data-i18n="navGrowth"></a>
+      <a href="#exit" data-i18n="navExit"></a>
+      <a href="#demo" data-i18n="navDemo"></a>
+      <a href="#contact" data-i18n="navContact"></a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="l-en" type="button">EN</button><button id="l-bn" type="button">বাং</button>
+      </div>
+      <button class="btn btn-out acct" id="acctBtn" type="button"></button>
+      <a class="btn btn-gold btn-sm hide-m" href="#demo" data-i18n="navReqDemo"></a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="20" height="20" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="#packages" data-i18n="navPackages"></a><a href="#growth" data-i18n="navGrowth"></a>
+    <a href="#exit" data-i18n="navExit"></a><a href="#demo" data-i18n="navDemo"></a><a href="#contact" data-i18n="navContact"></a>
+    <button class="btn btn-navy acct-m" type="button"></button>
+    <a class="btn btn-gold" href="#demo" data-i18n="navReqDemo"></a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="grid">
+    <div>
+      <span class="pill"><i></i><span data-i18n="heroEyebrow"></span></span>
+      <h1 data-i18n="heroTitle"></h1>
+      <p class="sub" data-i18n="heroSub"></p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#packages" data-i18n="heroCta1"></a>
+        <a class="btn btn-ghost" href="#demo" data-i18n="heroCta2"></a>
+      </div>
+      <div class="badges" id="heroBadges"></div>
+    </div>
+    <div class="chartcard">
+      <div class="lbl" data-i18n="heroCardLabel"></div>
+      <div class="bars" id="heroBars"></div>
+      <div class="xl" id="heroX"></div>
+      <div class="gainbox"><span data-i18n="heroCardNote"></span><span id="heroGain"></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust"><div class="row" id="trust"></div></div>
+
+<!-- RETAIL -->
+<section class="sec" id="packages" style="background:#fff;margin-top:-30px;padding-top:clamp(90px,10vw,130px)">
+  <div class="two">
+    <div class="rv">
+      <div class="eyebrow" data-i18n="retailEyebrow"></div>
+      <h2 class="title" data-i18n="retailTitle"></h2>
+      <p class="lead" data-i18n="retailBody"></p>
+      <div class="note"><div class="ck">✓</div><p data-i18n="retailHighlight"></p></div>
+    </div>
+    <div class="rcard rv">
+      <div class="hd">
+        <small data-i18n="retailCardTitle"></small>
+        <div class="big"><b id="rTotal"></b><span id="rLabel"></span></div>
+      </div>
+      <div class="ctl">
+        <div class="r"><span data-i18n="retailShares"></span>
+          <div class="step"><button id="dec" type="button" aria-label="−">−</button><span id="rShares" aria-live="polite"></span><button id="inc" type="button" aria-label="+">+</button></div>
+        </div>
+        <div class="r"><span data-i18n="retailDownOpt"></span>
+          <div class="seg" id="seg"><button type="button" data-d="20000"></button><button type="button" data-d="15000"></button></div>
+        </div>
+      </div>
+      <div class="rows"><div id="rRows"></div><button class="btn btn-navy" type="button" data-open="auth" data-i18n="retailCta"></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section class="sec" id="growth">
+  <div class="center rv"><div class="eyebrow" data-i18n="growthEyebrow"></div><h2 class="title" data-i18n="growthTitle"></h2><p class="lead" data-i18n="growthBody"></p></div>
+  <div class="gcards rv" id="gcards"></div>
+  <div class="policy rv"><b data-i18n="policyTag"></b><p data-i18n="growthNote"></p></div>
+</section>
+
+<!-- TIERS -->
+<section class="sec" id="tiers" style="background:#fff">
+  <div class="center rv"><div class="eyebrow" data-i18n="tiersEyebrow"></div><h2 class="title" data-i18n="tiersTitle"></h2><p class="lead" data-i18n="tiersBody"></p></div>
+  <div class="tiers rv" id="tierGrid"></div>
+</section>
+
+<!-- HOW -->
+<section class="sec" id="how">
+  <div class="center rv"><div class="eyebrow" data-i18n="howEyebrow"></div><h2 class="title" data-i18n="howTitle"></h2></div>
+  <div class="how rv" id="howGrid"></div>
+</section>
+
+<!-- EXIT -->
+<section class="sec exit" id="exit">
+  <div class="two">
+    <div class="rv">
+      <div class="eyebrow" style="color:var(--gold2)" data-i18n="exitEyebrow"></div>
+      <h2 class="title" data-i18n="exitTitle"></h2>
+      <div class="ex" id="exItems"></div>
+    </div>
+    <div class="fees rv">
+      <div style="font-weight:800;font-size:18px" data-i18n="feeTitle"></div>
+      <div style="color:var(--body);font-size:14px;margin:6px 0 18px" data-i18n="feeSub"></div>
+      <div id="feeRows"></div>
+      <div class="fn" data-i18n="feeNote"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="background:#fff">
+  <div class="center rv" style="margin-bottom:36px"><div class="eyebrow" data-i18n="faqEyebrow"></div><h2 class="title" data-i18n="faqTitle"></h2></div>
+  <div class="faq rv" id="faqList"></div>
+</section>
+
+<!-- DEMO -->
+<section class="sec" id="demo">
+  <div class="two" style="max-width:1100px">
+    <div class="rv">
+      <div class="eyebrow" data-i18n="demoEyebrow"></div>
+      <h2 class="title" data-i18n="demoTitle"></h2>
+      <p class="lead" data-i18n="demoBody"></p>
+      <div class="pts" id="demoPts"></div>
+    </div>
+    <form class="form rv" id="demoForm" novalidate>
+      <label class="fld"><span data-i18n="fName"></span><input name="name" required autocomplete="name" data-ph="phName"></label>
+      <label class="fld"><span data-i18n="fEmail"></span><input name="email" type="email" required autocomplete="email" data-ph="phEmail"></label>
+      <label class="fld"><span data-i18n="fPhone"></span><input name="phone" type="tel" required autocomplete="tel" inputmode="tel" data-ph="phPhone"></label>
+      <label class="fld"><span data-i18n="fTier"></span><select name="tier" class="tierSel"></select></label>
+      <div class="err" id="demoErr" hidden></div>
+      <button class="btn btn-gold" type="submit" id="demoBtn" data-i18n="demoSubmit"></button>
+      <p class="small" data-i18n="demoPrivacy"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="cols">
+    <div><div class="lg"><img src="logo.png" alt="HolyLoy Developments Ltd."></div><p style="font-size:14px;line-height:1.7;margin:18px 0 0;max-width:280px" data-i18n="footAbout"></p></div>
+    <div><h4 data-i18n="footContact"></h4>
+      <div class="list"><a class="w" href="tel:+8801919666630">+880 1919-666630</a><a class="w" href="mailto:holyloydev.bd@gmail.com">holyloydev.bd@gmail.com</a><a class="w" href="https://holyloydev.com">holyloydev.com</a><span data-i18n="address"></span></div></div>
+    <div><h4 data-i18n="footLinks"></h4>
+      <div class="list"><a href="#packages" data-i18n="navPackages"></a><a href="#growth" data-i18n="navGrowth"></a><a href="#tiers" data-i18n="tiersEyebrow"></a><a href="#exit" data-i18n="navExit"></a><a href="#faq" data-i18n="faqEyebrow"></a><a href="#demo" data-i18n="navDemo"></a></div></div>
+    <div><h4 data-i18n="footVisit"></h4><p style="font-size:14px;line-height:1.7;margin:0 0 16px" data-i18n="footVisitBody"></p>
+      <a class="btn btn-gold btn-sm" href="tel:+8801919666630" data-i18n="callNow"></a></div>
+  </div>
+  <div class="disc" data-i18n="disclaimer"></div>
+  <div class="cp"><span data-i18n="copyright"></span><span>holyloydev.com</span></div>
+</footer>
+
+<div class="fab">
+  <a class="wa" href="https://wa.me/8801919666630" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+  <a class="ph" href="tel:+8801919666630" aria-label="Call"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></a>
+</div>
+
+<!-- DEMO SUCCESS -->
+<div class="ov" id="m-demo" role="dialog" aria-modal="true" aria-labelledby="demoOkT">
+  <div class="modal" style="max-width:480px;padding:32px;text-align:center">
+    <div class="okmark">✓</div>
+    <h3 id="demoOkT" style="font-size:22px;font-weight:800;margin:18px 0 8px" data-i18n="demoOkTitle"></h3>
+    <p style="color:var(--body);line-height:1.6;margin:0 0 6px" data-i18n="demoOkBody"></p>
+    <p style="color:var(--body);font-size:13px;margin:0 0 20px" data-i18n="demoSaved"></p>
+    <div class="cred"><div><span data-i18n="demoUser"></span><code id="credE">demo@holyloydev.com</code></div><div><span data-i18n="demoPass"></span><code id="credP">HolyLoyDemo@2026</code></div></div>
+    <button class="btn btn-navy" style="width:100%;margin-top:22px" type="button" id="goSandbox" data-i18n="demoLoginBtn"></button>
+    <button style="margin-top:10px;border:0;background:none;color:var(--body);cursor:pointer;padding:8px" type="button" data-close data-i18n="close"></button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="ov" id="m-dash" role="dialog" aria-modal="true" aria-labelledby="dashT">
+  <div class="modal" style="max-width:760px;background:var(--mist)">
+    <div class="dh"><div><small id="dTag"></small><div id="dashT" style="font-size:20px;font-weight:800;margin-top:4px"></div></div><button class="x" type="button" data-close aria-label="Close">✕</button></div>
+    <div class="mb" style="padding:24px;gap:16px">
+      <div class="stats" id="dStats"></div>
+      <div class="prog"><div class="t"><span data-i18n="sbProgress"></span><span id="dPaid" style="color:var(--gold)"></span></div><div class="bg"><i id="dBar"></i></div><div id="dNext" style="font-size:13px;color:var(--body);margin-top:10px"></div></div>
+      <div id="dNote" class="small"></div>
+      <button class="btn btn-out" type="button" id="logoutBtn" style="justify-self:center" data-i18n="logout"></button>
+    </div>
+  </div>
+</div>
+
+<!-- AUTH -->
+<div class="ov" id="m-auth" role="dialog" aria-modal="true" aria-labelledby="authT">
+  <div class="modal" style="max-width:560px">
+    <div class="mh"><div id="authT" style="font-size:20px;font-weight:800" data-i18n="authTitle"></div><button class="x" type="button" data-close aria-label="Close">✕</button></div>
+    <div class="tabs" role="tablist"><button type="button" id="tabReg" role="tab" data-i18n="tabRegister"></button><button type="button" id="tabLog" role="tab" data-i18n="tabLogin"></button></div>
+
+    <form class="mb" id="regForm" novalidate>
+      <div class="fgrid">
+        <label class="fld"><span data-i18n="fName"></span><input name="name" required autocomplete="name" data-ph="phName"></label>
+        <label class="fld"><span data-i18n="fEmail"></span><input name="email" type="email" required autocomplete="email" data-ph="phEmail"></label>
+        <label class="fld"><span data-i18n="fPhoneShort"></span><input name="phone" type="tel" required autocomplete="tel" inputmode="tel" data-ph="phPhone"></label>
+        <label class="fld"><span data-i18n="fNid"></span><input name="nid" required inputmode="numeric" data-ph="phNid"></label>
+        <label class="fld"><span data-i18n="fNominee"></span><input name="nominee" required data-ph="phNominee"></label>
+        <label class="fld"><span data-i18n="fPackage"></span><select name="shares" class="tierSel"></select></label>
+        <label class="fld"><span data-i18n="fPass"></span><input name="password" type="password" required minlength="8" autocomplete="new-password" data-ph="phPass"></label>
+        <label class="fld"><span data-i18n="fPassConfirm"></span><input name="confirm" type="password" required autocomplete="new-password"></label>
+      </div>
+      <div class="agree">
+        <div style="font-weight:800;font-size:14px" data-i18n="agreeTitle"></div>
+        <button class="dl" type="button" id="dlPdf"><em>PDF</em><span data-i18n="agreeDownload"></span></button>
+        <label><input type="checkbox" name="agree" id="agree"><span data-i18n="agreeCheck"></span></label>
+      </div>
+      <div class="err" id="regErr" hidden></div>
+      <button class="btn btn-navy" type="submit" id="regBtn" data-i18n="createProfile"></button>
+    </form>
+
+    <form class="mb" id="logForm" novalidate hidden>
+      <label class="fld"><span data-i18n="fEmail"></span><input name="email" type="email" required autocomplete="username" placeholder="demo@holyloydev.com"></label>
+      <label class="fld"><span data-i18n="fPassword"></span><input name="password" type="password" required autocomplete="current-password" placeholder="••••••••"></label>
+      <div class="err" id="logErr" hidden></div>
+      <button class="btn btn-navy" type="submit" id="logBtn" data-i18n="tabLogin"></button>
+      <p class="small" data-i18n="loginHint"></p>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"><i>●</i><span id="toastT"></span></div>
+
+<script src="i18n.js"></script>
+<script src="i18n-extra.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
